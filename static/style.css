@@ -21,22 +21,27 @@
 #start_area {
   position: relative;
   justify-content: center;
+  align-items: baseline;
   display: flex;
-  
 }
 
 #start_text {
-  left : 18%;
   top : 50%;
-  width : calc(60%);
+  width : calc(38%);
   padding : 30px;
-  margin : 30px;
+  margin : 20px;
   border : 3px solid skyblue;
   border-radius: 10px;
   position : absolute;
-  margin : auto;
   text-align: left;
   font-size : 32px;
+}
+
+#start_btn {
+  position: relative;
+  top : 80%;
+  padding : 10px;
+  margin : 10px;
 }
 
 #topMenu {
