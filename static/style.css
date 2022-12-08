@@ -18,6 +18,27 @@
   display: block;
 }
 
+#start_area {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  
+}
+
+#start_text {
+  left : 18%;
+  top : 50%;
+  width : calc(60%);
+  padding : 30px;
+  margin : 30px;
+  border : 3px solid skyblue;
+  border-radius: 10px;
+  position : absolute;
+  margin : auto;
+  text-align: left;
+  font-size : 32px;
+}
+
 #topMenu {
   width: calc(98%);
   margin: 10px;
