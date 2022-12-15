@@ -28,7 +28,7 @@ def musinsaouterCrawling(pageNum):
     driver.close()
 
 def musinsapantsCrawling(pageNum):
-    baseUrl = 'https://www.musinsa.com/categories/item/003?d_cat_cd=003&brand=&list_kind=small&sort=emt_high&sub_sort=&page=1&display_cnt=90&group_sale=&exclusive_yn=&sale_goods=&timesale_yn=&ex_soldout=&kids=&color=&price1=&price2=&shoeSizeOption=&tags=&campaign_id=&includeKeywords=&measure='
+    baseUrl = 'https://www.musinsa.com/categories/item/003?d_cat_cd=003&brand=&list_kind=small&sort=sale_high&sub_sort=1m&page=1&display_cnt=90&group_sale=&exclusive_yn=&sale_goods=&timesale_yn=&ex_soldout=&kids=&color=&price1=&price2=&shoeSizeOption=&tags=&campaign_id=&includeKeywords=&measure='
     baseUrl1 = '&page='
     url = baseUrl + baseUrl1 + str(pageNum)
     driver = webdriver.Chrome()
