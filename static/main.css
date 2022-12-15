@@ -23,53 +23,6 @@
   color: black;
 }
 
-#start_area {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-#start_text {
-  display: block;
-  position: relative;
-  justify-content: center;
-  width : calc(33%);
-  padding : 30px;
-  margin : 20px;
-  border : 3px solid grey;
-  border-radius: 5px;
-}
-
-#login_btn {
-  border: 0px;
-  border-radius: 5px;
-  color : black;
-  padding : 10px;
-  margin : 10px;
-  font-size : 24px;
-}
-
-#register_btn {
-  border: 0px;
-  border-radius: 5px;
-  color : black;
-  padding : 10px;
-  margin : 10px;
-  font-size : 24px;
-}
-
-#login_btn:hover {
-  border : 5px;
-  border-color: black;
-  color:black;
-}
-#register_btn:hover {
-  border : 5px;
-  border-color: black;
-  color:black;
-}
-
 #id_form {
   background-color: white;
   padding : 5px;
@@ -87,29 +40,45 @@
 }
 
 #contents {
+  border-radius: 5px;
+  background-color: white;
   width : 50%;
   height : 20%;
 }
 
 #categories {
+  background-color: white;
   margin : 10px;
   list-style: none;
 }
 
+#images {
+  font-size : 24px;
+  margin : 10px;
+  padding : 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
 .item {
+  background-color: grey;
   width : 20%;
   padding: 5px;
   display : inline-block;
   font-size : 24px;
   margin : 10px;
-  border : 2px solid grey;
+  border : none;
   border-radius: 5px;
+}
+
+.item:hover {
+  border : 3px solid black;
+  font-weight: 800;
 }
 
 .custom_footer {
   width: calc(100% - 35px);
   height: 35px;
-  background-color: white;
   color : white;
   text-align: center;
   font-size: 16px;

@@ -1,46 +1,53 @@
-import os
-import time
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
 import urllib.request
+from urllib.parse import quote_plus  # 아스키 코드로 변환해준다
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+savelink = 'images'
 
 
-def PageUrl(itemName, pageNum):
-    url = "https://search.musinsa.com/search/musinsa/goods?q=" + itemName + "&list_kind=small&sortCode=pop&sub_sort=&page=" + \
-        str(pageNum) + "&display_cnt=0&saleGoods=false&includeSoldOut=false&popular=false&category1DepthCode=&category2DepthCodes=&category3DepthCodes=&selectedFilters=&category1DepthName=&category2DepthName=&brandIds=&price=&colorCodes=&contentType=&styleTypes=&includeKeywords=&excludeKeywords=&originalYn=N&tags=&saleCampaign=false&serviceType=&eventType=&type=&season=&measure=&openFilterLayout=N&selectedOrderMeasure=&d_cat_cd="
-    return url
+def musinsaCrawling(pageNum):
+    baseUrl = 'https://store.musinsa.com/app/product/search?search_type=1&q='
+    baseUrl1 = '&page='
+    url = baseUrl + quote_plus(plusUrl) + baseUrl1 + str(pageNum)
+    driver = webdriver.Chrome()
+    driver.get(url)
 
+    pageString = driver.page_source
+    soup = BeautifulSoup(pageString, features="html.parser")
 
-FindingItemName = "신발"
+    result1 = soup.find(name='ul', attrs={
+                        'class': 'snap-article-list boxed-article-list article-list center list goods_small_media8'})
+    result2 = result1.find_all(name="img")
 
-driver = webdriver.Chrome(os.getcwd() + "/chromedriver")
-
-pageUrl = PageUrl(FindingItemName, 1)
-driver.get(pageUrl)
-
-totalPageNum = driver.find_element_by_css_selector(".totalPagingNum").text
-items = driver.find_elements_by_css_selector(".lazyload.lazy")
-print("Total Page of ", FindingItemName, " : ", str(totalPageNum))
-
-cnt = 1
-for i in range(int(totalPageNum)):
-    pageUrl = PageUrl(FindingItemName, i+1)
-    driver.get(pageUrl)
-    time.sleep(0.5)
-    items = driver.find_elements_by_css_selector(".lazyload.lazy")
-    print("Finding: ", FindingItemName, " - Page ", i+1, "/",
-          totalPageNum, " start - ", len(items), " items exist")
-
-    for item in items:
+    for i in result2:
         try:
-            time.sleep(0.5)
-            imgUrl = item.get_attribute("data-original")
-            urllib.request.urlretrieve(
-                imgUrl, "../images/musinsa/m" + str(cnt) + ".jpg")
-            cnt += 1
-        except Exception as e:
-            print(e)
-            pass
+            image = i.attrs['data-original']
+            reallink.append(image)
+        except:
+            continue
+    driver.close()
 
-driver.close()
+
+plusUrl = input('검색할 옷을 입력하시오: ')
+reallink = []
+
+for i in range(1, 2):
+    musinsaCrawling(i)
+
+if plusUrl == '스몰로고맨투맨':
+    title = 'small logo sweatshir'
+elif plusUrl == '빅로고맨투맨':
+    title = 'big logo sweatshir'
+elif plusUrl == '스트라이프맨투맨':
+    title = 'stripe sweatshir'
+
+
+n = 1
+for i in range(0, 5):
+    urllib.request.urlretrieve(
+        "http:"+reallink[i], "images/" + title + "("+str(n)+")"+".jpg")
+    n += 1
+
+for i in range(0, 5):
+    print(i + 1, '번 째 링크 :', reallink[i])
