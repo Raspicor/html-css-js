@@ -53,8 +53,8 @@
 }
 
 .itemlist {
-  align-items: left;
-  display: flex;
+  align-items: center;
+  display: inline-block;
   background-color: white;
   list-style: none;
 }
