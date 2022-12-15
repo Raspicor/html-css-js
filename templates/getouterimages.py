@@ -12,11 +12,11 @@ def musinsaCrawling(pageNum):
 
     pageString = driver.page_source
     soup = BeautifulSoup(pageString, features="html.parser")
-
     result1 = soup.find(name='ul', attrs={
                         'class': 'snap-article-list boxed-article-list article-list center list goods_small_media8'})
     result2 = result1.find_all(name="img")
-    print(url)
+    result3 = result1.find_all(name="data-no", attrs={'class': 'li_box'})
+    print(result3)
     for i in result2:
         try:
             image = i.attrs['data-original']
