@@ -5,7 +5,7 @@ from selenium import webdriver
 
 
 def musinsaCrawling(pageNum):
-    baseUrl = 'https://www.musinsa.com/categories/item/002?d_cat_cd=002&brand=&list_kind=small&sort=sale_high&sub_sort=1m&page=1&display_cnt=90&group_sale=&exclusive_yn=&sale_goods=&timesale_yn=&ex_soldout=&kids=&color=&price1=&price2=&shoeSizeOption=&tags=&campaign_id=&includeKeywords=&measure='
+    baseUrl = 'https://www.musinsa.com/categories/item/001?d_cat_cd=001&brand=&list_kind=small&sort=sale_high&sub_sort=1m&page=1&display_cnt=90&group_sale=&exclusive_yn=&sale_goods=&timesale_yn=&ex_soldout=&kids=&color=&price1=&price2=&shoeSizeOption=&tags=&campaign_id=&includeKeywords=&measure='
     baseUrl1 = '&page='
     url = baseUrl + baseUrl1 + str(pageNum)
     driver = webdriver.Chrome()
@@ -36,5 +36,5 @@ for i in range(1, 2):
 n = 1
 for i in range(0, 5):
     urllib.request.urlretrieve(
-        "http:"+reallink[i], "images/" + "아우터("+str(n)+")"+".jpg")
+        "http:"+reallink[i], "images/" + "상의("+str(n)+")"+".jpg")
     n += 1
