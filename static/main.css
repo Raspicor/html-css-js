@@ -23,26 +23,10 @@
   color: black;
 }
 
-#id_form {
-  background-color: white;
-  padding : 5px;
-  width : 80%;
-  height : 28px;
-  border-radius: 5px;
-}
-
-#pw_form {
-  background-color: white;
-  padding : 5px;
-  width : 80%;
-  height : 28px;
-  border-radius: 5px;
-}
-
 #contents {
   border-radius: 5px;
   background-color: white;
-  width : 50%;
+  width : 80%;
   height : 20%;
 }
 
@@ -50,14 +34,6 @@
   background-color: white;
   margin : 10px;
   list-style: none;
-}
-
-#images {
-  font-size : 24px;
-  margin : 10px;
-  padding : 10px;
-  background-color: white;
-  border-radius: 5px;
 }
 
 .item {
@@ -74,6 +50,39 @@
 .item:hover {
   border : 3px solid black;
   font-weight: 800;
+}
+
+.itemlist {
+  align-items: left;
+  display: flex;
+  background-color: white;
+  list-style: none;
+}
+
+.itemimg {
+  border-radius: 5px;
+  display: inline-block;
+  margin : 10px;
+  padding : 10px;
+  border:3px solid #3a3a3a;
+  list-style: none;
+  background-color: white;
+}
+
+.itemimgs {
+  background-color: white;
+  margin : 10px;
+  list-style: none;
+  border-radius: 5px;
+  width : 70%;
+  height : 20%;
+  padding : 10px;
+  border-radius: 5px;
+}
+
+.iteminfor {
+  font-size : 16px;
+  background-color: white;
 }
 
 .custom_footer {

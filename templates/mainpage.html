@@ -10,12 +10,6 @@
     <link rel="stylesheet" type="text/css" href="../static/main.css" />
   </head>
   <body>
-    <py-env>
-      import urllib.request
-      from urllib.parse import quote_plus
-      from bs4 import BeautifulSoup
-      from selenium import webdriver
-    </py-env>
     <center>
       <a id="custom_header" href="../templates/mainpage.html">Moosinsa clone</a>
     </center>
@@ -26,12 +20,104 @@
           <button class="item" id="upper" style="color: white;">상의</button>
           <button class="item" id="pants" style="color: white;">하의</button>
           <button class="item" id="shoes" style="color: white;">신발</button>
-          <>
         </ul>
         <hr noshade style="
         width : 95%; color:grey;">
         <br />
-        <div id="images">원하시는 카테고리를 선택해주세요.</div>
+        <div id="outerimages" class = "itemimgs" style = "display : none; background-color: white;">
+          <ul class = "itemlist" />
+            <li class = "itemimg">
+              <img style = "height: 150px;"src="../images/아우터(1).jpg" /><br>
+              <p class = "iteminfor">판매량 1위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+                구매하기</a></li>
+            <li class = "itemimg">
+              <img style = "height: 150px;"src="../images/아우터(2).jpg" /><br>
+              <p class = "iteminfor">판매량 2위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+                구매하기</a></li>
+            <li class = "itemimg">
+              <img style = "height: 150px;"src="../images/아우터(3).jpg" /><br>
+              <p class = "iteminfor">판매량 3위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+                구매하기</a></li>
+            <li class = "itemimg">
+              <img style = "height: 150px;"src="../images/아우터(4).jpg" /><br>
+              <p class = "iteminfor">판매량 4위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+            <li class = "itemimg">
+              <img style = "height: 150px;"src="../images/아우터(5).jpg" /><br>
+              <p class = "iteminfor">판매량 5위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+                구매하기</a></li>
+        </div>
+        <div id="upperimages" class = "itemimgs" style = "display : none; background-color: white;">
+          <ul class = "itemlist" />
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/상의(1).jpg" /><br>
+            <p class = "iteminfor">판매량 1위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/상의(2).jpg" /><br>
+            <p class = "iteminfor">판매량 2위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/상의(3).jpg" /><br>
+            <p class = "iteminfor">판매량 3위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/상의(4).jpg" /><br>
+            <p class = "iteminfor">판매량 4위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+            구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/상의(5).jpg" /><br>
+            <p class = "iteminfor">판매량 5위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+        </div>
+        <div id="pantsimages" class = "itemimgs" style = "display : none; background-color: white;">
+          <ul class = "itemlist" />
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/하의(1).jpg" /><br>
+            <p class = "iteminfor">판매량 1위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/하의(2).jpg" /><br>
+            <p class = "iteminfor">판매량 2위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/하의(3).jpg" /><br>
+            <p class = "iteminfor">판매량 3위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/하의(4).jpg" /><br>
+            <p class = "iteminfor">판매량 4위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+            구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "height: 150px;"src="../images/하의(5).jpg" /><br>
+            <p class = "iteminfor">판매량 5위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+        </div>
+        <div id="shoesimages" class = "itemimgs" style = "display : none; background-color: white;">
+          <ul class = "itemlist" />
+          <li class = "itemimg">
+            
+            <img style = "height: 150px;"
+            src="../images/신발(1).jpg" /><br>
+            <p class = "iteminfor">판매량 1위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "width : 125px;height: 150px"src="../images/신발(2).jpg" /><br>
+            <p class = "iteminfor">판매량 2위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "width : 125px;height: 150px;"src="../images/신발(3).jpg" /><br>
+            <p class = "iteminfor">판매량 3위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "width : 125px;height: 150px;"src="../images/신발(4).jpg" /><br>
+            <p class = "iteminfor">판매량 4위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+            구매하기</a></li>
+          <li class = "itemimg">
+            <img style = "width : 125px;height: 150px;"src="../images/신발(5).jpg" /><br>
+            <p class = "iteminfor">판매량 5위</p><a href = "https://www.musinsa.com/app/goods/2037173" class = "iteminfor">
+              구매하기</a></li>
+        </div>
       </div>
     </center>
   </body>

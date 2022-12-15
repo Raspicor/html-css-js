@@ -3,7 +3,10 @@ const upper = document.getElementById("upper");
 const pants = document.getElementById("pants");
 const shoes = document.getElementById("shoes");
 const contents = document.getElementById("images");
-
+const outerimgs = document.getElementById("outerimages");
+const upperimgs = document.getElementById("upperimages");
+const pantsimgs = document.getElementById("pantsimages");
+const shoesimgs = document.getElementById("shoesimages");
 outer.addEventListener("click", e => {
   e.preventDefault();
   chose("outer");
@@ -38,6 +41,10 @@ function chose(chosenmenu) {
       pants.style.fontWeight = 500;
       shoes.style.border = "none";
       shoes.style.fontWeight = 500;
+      outerimgs.style.display ="";
+      upperimgs.style.display ="none";
+      pantsimgs.style.display ="none";
+      shoesimgs.style.display ="none";
       break;
     case "upper":
       outer.style.border = "none";
@@ -48,6 +55,10 @@ function chose(chosenmenu) {
       pants.style.fontWeight = 500;
       shoes.style.border = "none";
       shoes.style.fontWeight = 500;
+      outerimgs.style.display ="none";
+      upperimgs.style.display ="";
+      pantsimgs.style.display ="none";
+      shoesimgs.style.display ="none";
       break;
     case "pants":
       outer.style.border = "none";
@@ -58,6 +69,10 @@ function chose(chosenmenu) {
       pants.style.fontWeight = 800;
       shoes.style.border = "none";
       shoes.style.fontWeight = 500;
+      outerimgs.style.display ="none";
+      upperimgs.style.display ="none";
+      pantsimgs.style.display ="";
+      shoesimgs.style.display ="none";
       break;
     case "shoes":
       outer.style.border = "none";
@@ -68,6 +83,10 @@ function chose(chosenmenu) {
       pants.style.fontWeight = 500;
       shoes.style.border = "3px solid black";
       shoes.style.fontWeight = 800;
+      outerimgs.style.display ="none";
+      upperimgs.style.display ="none";
+      pantsimgs.style.display ="none";
+      shoesimgs.style.display ="";
       break;
   }
 };
