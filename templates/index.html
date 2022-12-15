@@ -14,18 +14,47 @@
       <a id="custom_header" href="../templates/index.html">Moosinsa clone</a>
     </center>
     <div id="start_area">
-      <div id="start_text">
-        <center style="font-size: 32px;">회원가입 및 로그인</center>
+      <div id="start_text" style="background-color: white;">
+        <center style="background-color: white; font-size: 32px; color: black;">
+          회원가입 및 로그인
+        </center>
         <br />
-        <center>
+
+        <center
+          id="register_form"
+          style="display: none; background-color: white;"
+        >
+          <input required placeholder="아이디" id="check_id_form" />
+          <br />
+          <br />
+          <input
+            required
+            placeholder="비밀번호"
+            type="password"
+            id="re_pw_form"
+          />
+          <br />
+          <br />
+          <input
+            required
+            placeholder="비밀번호 확인"
+            type="password"
+            id="check_pw_form"
+          />
+          <br />
+          <br />
+          <button id="check_btn" type="button">확 인</button>
+        </center>
+
+        <center id="login_form" style="background-color: white;">
           <input required placeholder="아이디" id="id_form" />
           <br />
           <br />
-          <input required placeholder="비밀번호" id="pw_form" />
+          <input required type="password" placeholder="비밀번호" id="pw_form" />
           <br />
           <br />
-          <button id="register_btn" type="button" onclick="">회원가입</button>
-          <button id="login_btn" type="button" onclick="">로그인</button>
+          <button id="register_btn" type="button">회원가입</button>
+          <button id="login_btn" type="button">로그인</button>
         </center>
       </div>
     </div>

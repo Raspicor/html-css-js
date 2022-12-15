@@ -8,7 +8,7 @@
 #custom_header {
   padding : 10px;
   margin : 10px;
-  margin-top: calc(10%);
+  margin-top: 20px;
   font-size: 40px;
   border-radius: 5px;
   background-color: grey;
@@ -37,43 +37,26 @@
   width : calc(33%);
   padding : 30px;
   margin : 20px;
-  border : 3px solid #4a4a4a;
+  border : 3px solid grey;
   border-radius: 5px;
 }
 
 #login_btn {
-  background-color: grey;
-  color : white;
   border: 0px;
   border-radius: 5px;
+  color : black;
   padding : 10px;
   margin : 10px;
   font-size : 24px;
 }
 
 #register_btn {
-  background-color: grey;
-  color : white;
   border: 0px;
   border-radius: 5px;
+  color : black;
   padding : 10px;
   margin : 10px;
   font-size : 24px;
-}
-#check_btn {
-  background-color: grey;
-  color : white;
-  border: 0px;
-  border-radius: 5px;
-  padding : 10px;
-  margin : 10px;
-  font-size : 24px;
-}
-
-#check_btn:hover {
-  border : 5px;
-  border-color: black;
-  color:black;
 }
 
 #login_btn:hover {
@@ -81,7 +64,6 @@
   border-color: black;
   color:black;
 }
-
 #register_btn:hover {
   border : 5px;
   border-color: black;
@@ -97,28 +79,6 @@
 }
 
 #pw_form {
-  background-color: white;
-  padding : 5px;
-  width : 80%;
-  height : 28px;
-  border-radius: 5px;
-}
-#re_pw_form {
-    background-color: white;
-    padding : 5px;
-    width : 80%;
-    height : 28px;
-    border-radius: 5px;
-}
-#check_id_form {
-  background-color: white;
-  padding : 5px;
-  width : 80%;
-  height : 28px;
-  border-radius: 5px;
-}
-
-#check_pw_form {
   background-color: white;
   padding : 5px;
   width : 80%;

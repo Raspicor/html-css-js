@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/earlyaccess/jejugothic.css"
     />
-    <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/main.css" />
   </head>
   <body>
     <center>
@@ -16,15 +16,21 @@
     <center>
       <div id="contents">
         <ul id="categories">
-          <a id="item">아우터</a>
-          <a id="item">상의</a>
-          <a id="item">하의</a>
-          <a id="item">신발</a>
+          <button class="item" id="outer" style="color: white;">아우터</button>
+          <button class="item" id="upper" style="color: white;">상의</button>
+          <button class="item" id="pants" style="color: white;">하의</button>
+          <button class="item" id="shoes" style="color: white;">신발</button>
         </ul>
       </div>
       <br />
       <div id="images">contents</div>
     </center>
   </body>
+  <footer class="custom_footer">
+    <p>
+      [31538] 충남 아산시 순천향로 22 | COPYRIGHT(C) 윤장원, 이가현. ALL
+      RIGHTS RESERVED.
+    </p>
   <py-script output="plot" src="../templates/getimages.py"></py-script>
+  <script src="../static/main.js"></script>
 </html>
