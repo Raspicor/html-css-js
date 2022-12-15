@@ -10,6 +10,21 @@
     <link rel="stylesheet" type="text/css" href="../static/style.css" />
   </head>
   <body>
-    hello!
+    <center>
+      <a id="custom_header" href="../templates/mainpage.html">Moosinsa clone</a>
+    </center>
+    <center>
+      <div id="contents">
+        <ul id="categories">
+          <a id="item">아우터</a>
+          <a id="item">상의</a>
+          <a id="item">하의</a>
+          <a id="item">신발</a>
+        </ul>
+      </div>
+      <br />
+      <div id="images">contents</div>
+    </center>
   </body>
+  <py-script output="plot" src="../templates/getimages.py"></py-script>
 </html>
