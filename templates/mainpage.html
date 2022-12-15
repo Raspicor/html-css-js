@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="../static/main.css" />
   </head>
   <body>
+    <py-env>
+      import urllib.request
+      from urllib.parse import quote_plus
+      from bs4 import BeautifulSoup
+      from selenium import webdriver
+    </py-env>
     <center>
       <a id="custom_header" href="../templates/mainpage.html">Moosinsa clone</a>
     </center>

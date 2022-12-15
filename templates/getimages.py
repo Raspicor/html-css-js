@@ -1,15 +1,13 @@
 import urllib.request
-from urllib.parse import quote_plus  # 아스키 코드로 변환해준다
+from urllib.parse import quote_plus
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-savelink = 'images'
-
 
 def musinsaCrawling(pageNum):
-    baseUrl = 'https://store.musinsa.com/app/product/search?search_type=1&q='
+    baseUrl = 'https://www.musinsa.com/categories/item/002?d_cat_cd=002&brand=&list_kind=small&sort=sale_high&sub_sort=1m&page=1&display_cnt=90&group_sale=&exclusive_yn=&sale_goods=&timesale_yn=&ex_soldout=&kids=&color=&price1=&price2=&shoeSizeOption=&tags=&campaign_id=&includeKeywords=&measure='
     baseUrl1 = '&page='
-    url = baseUrl + quote_plus(plusUrl) + baseUrl1 + str(pageNum)
+    url = baseUrl + baseUrl1 + str(pageNum)
     driver = webdriver.Chrome()
     driver.get(url)
 
@@ -29,25 +27,14 @@ def musinsaCrawling(pageNum):
     driver.close()
 
 
-plusUrl = input('검색할 옷을 입력하시오: ')
 reallink = []
 
 for i in range(1, 2):
     musinsaCrawling(i)
 
-if plusUrl == '스몰로고맨투맨':
-    title = 'small logo sweatshir'
-elif plusUrl == '빅로고맨투맨':
-    title = 'big logo sweatshir'
-elif plusUrl == '스트라이프맨투맨':
-    title = 'stripe sweatshir'
-
 
 n = 1
 for i in range(0, 5):
     urllib.request.urlretrieve(
-        "http:"+reallink[i], "images/" + title + "("+str(n)+")"+".jpg")
+        "http:"+reallink[i], "images/" + "아우터("+str(n)+")"+".jpg")
     n += 1
-
-for i in range(0, 5):
-    print(i + 1, '번 째 링크 :', reallink[i])
