@@ -1,92 +1,97 @@
 * {
   font-family: "Jeju Gothic", sans-serif;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
 
 #custom_header {
-  line-height: 60px;
   padding : 10px;
-  margin : 20px;
+  margin : 10px;
   font-size: 40px;
   border-radius: 5px;
-  border: 3px solid;
-  background-color: skyblue;
+  border: none;
+  background-color: grey;
   color : white;
-  width : 15%;
+  width : 28%;
   text-decoration: none;
   display: block;
+}
+
+#custom_header:hover {
+  border : none;
+  color: black;
 }
 
 #start_area {
   position: relative;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   display: flex;
 }
 
 #start_text {
-  top : 50%;
-  width : calc(38%);
+  display: block;
+  position: relative;
+  justify-content: center;
+  width : calc(33%);
   padding : 30px;
   margin : 20px;
-  border : 3px solid skyblue;
-  border-radius: 10px;
-  position : absolute;
-  text-align: left;
-  font-size : 32px;
+  border : 3px solid grey;
+  border-radius: 5px;
 }
 
-#start_btn {
-  position: relative;
-  top : 80%;
+#login_btn {
+  background-color: grey;
+  border: 0px;
+  border-radius: 5px;
+  color : white;
   padding : 10px;
   margin : 10px;
+  font-size : 24px;
 }
 
-#topMenu {
-  width: calc(98%);
-  margin: 10px;
+#register_btn {
+  background-color: grey;
+  border: 0px;
+  border-radius: 5px;
+  color : white;
+  padding : 10px;
+  margin : 10px;
+  font-size : 24px;
 }
 
-#topMenu ul li {
-  border-radius: 10px;
-  border: 3px solid;
-  color: white;
-  background-color: skyblue;
-  line-height: 60px;
-  vertical-align: middle;
-  text-align: center;
-  float : right;
+#login_btn:hover {
+  border : 5px;
+  border-color: black;
+  color:black;
+}
+#register_btn:hover {
+  border : 5px;
+  border-color: black;
+  color:black;
 }
 
-#topMenu .menuLink {
-  text-decoration: none;
-  color: white;
-  display: block;
-  width: 160px;
-  font-size: 22px;
-  font-family: "Jeju Gothic", sans-serif;
+#id_form {
+  padding : 5px;
+  width : 80%;
+  height : 28px;
+  border-radius: 5px;
 }
 
-#topMenu .menuLink:hover {
-  border-radius: 10px;
-  color: blue;
-}
-
-#main_menu {
-  float : left;
+#pw_form {
+  padding : 5px;
+  width : 80%;
+  height : 28px;
+  border-radius: 5px;
 }
 
 .custom_footer {
-  padding: 10px;
-  margin: 5px;
   width: calc(100% - 35px);
   height: 35px;
-  border-radius: 5px;
-  background: skyblue;
+  background-color: white;
+  color : black;
   text-align: center;
-  color: white;
   font-size: 16px;
   bottom: 5px;
   position: fixed;
