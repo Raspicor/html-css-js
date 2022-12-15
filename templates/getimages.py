@@ -1,6 +1,12 @@
 import urllib.request
 from bs4 import BeautifulSoup
 from selenium import webdriver
+import os
+
+terminal_command1 = "python -m pip install beautifulsoup4" 
+terminal_command2 = "python -m pip install selenium" 
+os.system(terminal_command1)
+os.system(terminal_command2)
 
 outerlink = []
 upperlink = []

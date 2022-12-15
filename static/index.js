@@ -21,7 +21,7 @@ const register_check_btn = document.getElementById("check_btn");
 
 if (default_id.includes(local_id) && default_pw.includes(local_pw)) {
   console.log(local_id);
-  alert(`${local_id}로 자동 로그인됐습니다!`);
+  alert(`${local_id}로 자동 로그인됐습니다!\n잠시만 기다려주세요! 이미지를 불러오는 중입니다.`);
   location.href = '../templates/mainpage.html'
 } else {
 localStorage.removeItem("id");
@@ -42,7 +42,7 @@ login_btn.addEventListener("click", e => {
         localStorage["id"] = id_arr;
         localStorage["pw"] = pw_arr;
         console.log(localStorage);
-        alert(`${user_id}로 로그인됐습니다!`);
+        alert(`${user_id}로 로그인됐습니다!\n잠시만 기다려주세요! 이미지를 불러오는 중입니다.`);
         location.href = '../templates/mainpage.html'
       } else {
         alert('아이디와 비밀번호를 정확히 입력해주세요!');
