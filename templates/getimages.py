@@ -28,7 +28,7 @@ def musinsaouterCrawling(pageNum):
     for i in result2:
         try:
             image = i.attrs['data-original']
-            outerlink.append(image)
+            outerlink.append("http:" + image)
         except:
             continue
     driver.close()
@@ -50,7 +50,7 @@ def musinsapantsCrawling(pageNum):
     for i in result2:
         try:
             image = i.attrs['data-original']
-            pantslink.append(image)
+            pantslink.append("http:" + image)
         except:
             continue
     driver.close()
@@ -72,7 +72,7 @@ def musinsashoesCrawling(pageNum):
     for i in result2:
         try:
             image = i.attrs['data-original']
-            shoeslink.append(image)
+            shoeslink.append("http:" + image)
         except:
             continue
     driver.close()
@@ -94,7 +94,7 @@ def musinsaupperCrawling(pageNum):
     for i in result2:
         try:
             image = i.attrs['data-original']
-            upperlink.append(image)
+            upperlink.append("http:"+image)
         except:
             continue
     driver.close()
@@ -106,14 +106,18 @@ for i in range(1, 2):
     musinsaupperCrawling(i)
 
 n = 1
+print("outer links : \n")
+for i in range(5):
+    print(outerlink[i], '\n')
 
-for i in range(0, 5):
-    urllib.request.urlretrieve(
-        "http:"+outerlink[i], "images/" + "아우터("+str(n)+")"+".jpg")
-    urllib.request.urlretrieve(
-        "http:"+upperlink[i], "images/" + "상의("+str(n)+")"+".jpg")
-    urllib.request.urlretrieve(
-        "http:"+shoeslink[i], "images/" + "신발("+str(n)+")"+".jpg")
-    urllib.request.urlretrieve(
-        "http:"+pantslink[i], "images/" + "하의("+str(n)+")"+".jpg")
-    n += 1
+print("upper links : \n")
+for i in range(5):
+    print(upperlink[i], '\n')
+    
+print("pants links : \n")
+for i in range(5):
+    print(pantslink[i], '\n')
+    
+print("shoes links : \n")
+for i in range(5):
+    print(shoeslink[i], '\n')

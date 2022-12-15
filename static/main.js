@@ -7,6 +7,7 @@ const outerimgs = document.getElementById("outerimages");
 const upperimgs = document.getElementById("upperimages");
 const pantsimgs = document.getElementById("pantsimages");
 const shoesimgs = document.getElementById("shoesimages");
+
 outer.addEventListener("click", e => {
   e.preventDefault();
   chose("outer");

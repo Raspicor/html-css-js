@@ -24,8 +24,8 @@ if (default_id.includes(local_id) && default_pw.includes(local_pw)) {
   alert(`${local_id}로 자동 로그인됐습니다!\n잠시만 기다려주세요! 이미지를 불러오는 중입니다.`);
   location.href = '../templates/mainpage.html'
 } else {
-localStorage.removeItem("id");
-localStorage.removeItem("pw");
+    localStorage.removeItem("id");
+    localStorage.removeItem("pw");
 }
 login_btn.addEventListener("click", e => { 
   e.preventDefault();
