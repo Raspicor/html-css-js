@@ -2,12 +2,12 @@ import urllib.request
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import os
-
+'''
 terminal_command1 = "python -m pip install beautifulsoup4" 
 terminal_command2 = "python -m pip install selenium" 
 os.system(terminal_command1)
 os.system(terminal_command2)
-
+'''
 outerlink = []
 upperlink = []
 pantslink = []
@@ -99,13 +99,15 @@ def musinsaupperCrawling(pageNum):
             continue
     driver.close()
 
+#크롤링 함수 실행
 for i in range(1, 2):
     musinsaouterCrawling(i)
-    musinsapantsCrawling(i)
-    musinsashoesCrawling(i)
-    musinsaupperCrawling(i)
+    #musinsapantsCrawling(i)
+    #musinsashoesCrawling(i)
+    #musinsaupperCrawling(i)
 
-n = 1
+'''
+크롤링한 이미지의 링크 확인
 print("outer links : \n")
 for i in range(5):
     print(outerlink[i], '\n')
@@ -121,3 +123,9 @@ for i in range(5):
 print("shoes links : \n")
 for i in range(5):
     print(shoeslink[i], '\n')
+''' 
+#크롤링한 이미지 저장하는 코드
+n = 1
+for i in range(5):
+    urllib.request.urlretrieve(outerlink[i], "images/" + "outer_" + str(n) + ".jpg")
+    n = n + 1
